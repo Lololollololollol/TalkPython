@@ -69,18 +69,6 @@ def choose_location(board, symbol):
                 board[u][column] = symbol
                 break
 
-        # OLD CODE
-        # while board[x][given_column] is not None:
-        #     x = -1
-        #     continue
-        # else:
-        #     cell = board[x][column]
-        #     if cell is not None:
-        #         return False
-        #         print("It's already taken!")
-        #
-        #     board[x][column] = symbol
-        #     return True
 
 
 def show_board(board):
