@@ -55,8 +55,9 @@ def choose_location(board, symbol):
     given_column = int(input("Select a column: "))
     column = given_column - 1
 
-    if given_column < 1 or given_column > 7:
-        print("You entered a wrong column. The column value should be between 1 and 7")
+    if column < 0 or column >= len(board[0]):
+        return False
+
         # TODO: make user re-enter on wrong input
 
     else:
@@ -67,8 +68,7 @@ def choose_location(board, symbol):
         for u in range(5, -1, -1):
             if board[u][column] is None:
                 board[u][column] = symbol
-                break
-
+                return True
 
 
 def show_board(board):
